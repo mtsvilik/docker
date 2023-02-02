@@ -4,11 +4,11 @@ WORKDIR /app
 
 FROM maven
 
-COPY pom.xml ./
+COPY . .
+
 RUN mvn dependency:resolve
 
-COPY src ./src
+CMD ["mvn", "test", "-Dsuite=${SUITE_NAME}"]
 
-CMD ["mvn", "test", "-Dsuite=api"]
 
 

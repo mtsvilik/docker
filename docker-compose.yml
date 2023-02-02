@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  carina-demo:
+    environment:
+      - SUITE_NAME=${SUITE_NAME}
+    image: carina-demo
+    build: ./
+    volumes:
+      - /Users/solvd/Desktop/Docker/target:/target
+      - /Users/solvd/Desktop/Docker/reports:/reports
+
+
+
